@@ -14,10 +14,6 @@ Connect-GitLab -serviceroot "https://git.thenetw.org/" -token "XXXXXXXXXXXXXXXXX
 ```
 
 ```PowerShell
-Add-GitLabProjectMember -project "X0004" -user $username
-```
-
-```PowerShell
 $options = @{
     "issues_enabled"=$false;
     "merge_requests_enabled"=$false;
@@ -29,6 +25,10 @@ $options = @{
 }
 
 New-GitLabProject -name "X0004" -namespace "customer" -options $options
+```
+
+```PowerShell
+Add-GitLabProjectMember -project "X0004" -user $username
 ```
 
 ```PowerShell
